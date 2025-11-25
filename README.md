@@ -78,7 +78,7 @@ ollama pull mistral:instruct
 > **Nota:** Instalar de igual manera el modelo por defecto, este pesa aproximadamente 4.4 GB
 
 ```bash
-ollama pull mistral:instruct
+ollama pull mistral
 ```
 
 -----
