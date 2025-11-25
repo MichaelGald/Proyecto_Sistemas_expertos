@@ -52,17 +52,17 @@ Actúas como un asesor profesional, analizando documentos oficiales para resolve
             return False
         
         # Listar archivos TXT
-        archivos_txt = [f for f in os.listdir(carpeta) if f.endswith(".txt")]
-        print(f"Encontrados {len(archivos_txt)} archivos .txt")
+        archivos_validos = [f for f in os.listdir(carpeta) if f.endswith((".txt", ".md"))]
+        print(f"Encontrados {len(archivos_validos)} archivos .txt o .md")
         
-        if len(archivos_txt) == 0:
-            print("ERROR: No se encontraron archivos .txt")
+        if len(archivos_validos) == 0:
+            print("ERROR: No se encontraron archivos .txt o .md")
             return False
         
         # Cargar documentos uno por uno
         docs = []
         print("\n--- CARGANDO ARCHIVOS ---")
-        for archivo in tqdm(archivos_txt, desc="Leyendo archivos"):
+        for archivo in tqdm(archivos_validos, desc="Leyendo archivos"):
             try:
                 ruta_completa = os.path.join(carpeta, archivo)
                 loader = TextLoader(ruta_completa, encoding="utf-8")
