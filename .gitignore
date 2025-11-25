@@ -1,0 +1,12 @@
+*.zip
+*.rar
+
+# Ignorar la carpeta de documentos de la UNAH dentro de 'app/'
+app/documentos_unah/
+
+# Ignorar la carpeta de vectiores de Python dentro de 'app/'
+app/__pycache__/
+
+# Ignorar la carpeta de vectores de Python dentro de 'app/'
+app/vectores/
+
