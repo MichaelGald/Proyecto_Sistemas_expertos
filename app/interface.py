@@ -1,8 +1,10 @@
 import streamlit as st
 from rag import SistemaExpertoUNAH
 import os
+import chromadb
 
 st.set_page_config(page_title="Sistema Experto UNAH", page_icon="🎓")
+
 
 st.title("🎓 Sistema Experto UNAH — Mistral 7B")
 st.write("Asesor académico basado en documentos oficiales de la UNAH.")
